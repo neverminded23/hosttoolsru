@@ -1,0 +1,12 @@
+# Конфиг HostTools. Цвета задаются через & коды (&6 золотой, &c красный, &l жирный ...).
+prefix: "&c&l[UHC] &r"
+# Звуки (любой id ванильного звука)
+sounds:
+  ding: "minecraft:block.note_block.bell"
+  warn: "minecraft:entity.wither.spawn"
+  tick: "minecraft:block.note_block.pling"
+  go: "minecraft:entity.player.levelup"
+# После скольких предупреждений игрока кикает. 0 = никогда.
+auto-kick-warnings: 0
+# Команды, заблокированные для игроков в муте (и для всех, пока включён мут чата)
+muted-blocked-commands: [msg, tell, w, whisper, me, say, tm, teammsg, reply, r]

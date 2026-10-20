@@ -1,0 +1,97 @@
+name: HostTools
+version: ${project.version}
+main: dev.hosttools.HostTools
+api-version: '1.21'
+description: Команды хоста только для операторов (объявления, текст на экране, муты, предупреждения и многое другое)
+commands:
+  hshout:
+    description: Громкое объявление в чат для всех (со звуком)
+    usage: /hshout <сообщение>
+    permission: hosttools.use
+  hscreen:
+    description: Крупный текст по центру экрана у всех игроков (со звуком). Символ | разделяет заголовок и подзаголовок
+    usage: /hscreen <заголовок> [| подзаголовок]
+    permission: hosttools.use
+  hall:
+    description: Объявление в чат И текст на экран одновременно
+    usage: /hall <сообщение>
+    permission: hosttools.use
+  hbar:
+    description: Текст в экшен-баре (над хотбаром) на 5 секунд
+    usage: /hbar <сообщение>
+    permission: hosttools.use
+  hmute:
+    description: Замутить одного игрока или весь чат (all)
+    usage: /hmute <игрок|all> [причина]
+    permission: hosttools.use
+  hunmute:
+    description: Снять мут с одного игрока или со всего чата (all)
+    usage: /hunmute <игрок|all>
+    permission: hosttools.use
+  hmutelist:
+    description: Показать, кто в муте
+    usage: /hmutelist
+    permission: hosttools.use
+  hwarn:
+    description: Выдать игроку предупреждение (чат + экран + звук) и записать его
+    usage: /hwarn <игрок> <причина>
+    permission: hosttools.use
+  hwarns:
+    description: Показать предупреждения игрока
+    usage: /hwarns <игрок>
+    permission: hosttools.use
+  hunwarn:
+    description: Снять все предупреждения с игрока
+    usage: /hunwarn <игрок>
+    permission: hosttools.use
+  hdm:
+    description: Личное сообщение от хоста (чат + звук)
+    usage: /hdm <игрок> <сообщение>
+    permission: hosttools.use
+  hsc:
+    description: Чат стаффа, его видят только операторы
+    usage: /hsc <сообщение>
+    permission: hosttools.use
+  hclearchat:
+    description: Очистить чат для всех, кроме операторов
+    usage: /hclearchat
+    permission: hosttools.use
+  hslow:
+    description: Слоумод чата (задержка между сообщениями в секундах, off чтобы выключить)
+    usage: /hslow <секунды|off>
+    permission: hosttools.use
+  hfreeze:
+    description: Заморозить/разморозить игрока. all замораживает всех, off размораживает всех
+    usage: /hfreeze <игрок|all|off>
+    permission: hosttools.use
+  hcountdown:
+    description: Крупный отсчёт на экране со звуками
+    usage: /hcountdown <секунды|cancel> [текст в конце]
+    permission: hosttools.use
+  hheal:
+    description: Полностью вылечить игрока или всех (all)
+    usage: /hheal <игрок|all>
+    permission: hosttools.use
+  hfeed:
+    description: Восстановить сытость игрока или всех (all)
+    usage: /hfeed <игрок|all>
+    permission: hosttools.use
+  hfly:
+    description: Включить/выключить полёт
+    usage: /hfly [игрок]
+    permission: hosttools.use
+  hvanish:
+    description: Скрыть себя (или игрока) от всех, кроме операторов
+    usage: /hvanish [игрок]
+    permission: hosttools.use
+  hhelp:
+    description: Список всех команд HostTools
+    usage: /hhelp
+    permission: hosttools.use
+permissions:
+  hosttools.use:
+    description: Использование команд HostTools
+    default: op
+  hosttools.bypass:
+    description: Не затрагивается общим мутом, слоумодом, заморозкой всех и очисткой чата
+    default: op
